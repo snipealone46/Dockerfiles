@@ -1,6 +1,6 @@
 to-do-list:
   image: treehouse/to-do-list
-  volume: 
+  volumes: 
     - /Users/Eric/Documents/treehouse/to-do-list:/opt/to-do-list/current
   environment: 
     - BRANCH=dev

@@ -10,6 +10,7 @@ RUN chown -R rails:rails /opt
 # Configure entrypoint
 ADD entrypoint.sh /entrypoint.sh
 RUN chown rails:rails /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Download latest version of application

@@ -10,7 +10,7 @@ if [ -z "$BRANCH" ]; then
   BRANCH=dev
 fi
 
-if [ $# -eq 0]; then
+if [ $# -eq 0 ]; then
   /bin/bash
 else
   exec "$@"

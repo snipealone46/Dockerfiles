@@ -1,7 +1,10 @@
 to-do-list:
   image: treehouse/to-do-list
-  volumes: 
+  volumes:
     - /Users/Eric/Documents/treehouse/to-do-list:/opt/to-do-list/current
-  environment: 
+  environment:
     - BRANCH=dev
+  ports:
+    - 3000:3000
   stdin_open: true
+

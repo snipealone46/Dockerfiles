@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
     libyaml-dev          \
     sqlite3              \
     zlib1g-dev           \
-    libgmp3-dev
+    libgmp3-dev          \
+    nodejs
 # Needed to install websphere RPMs
 RUN apt-get update && apt-get install -y alien
 

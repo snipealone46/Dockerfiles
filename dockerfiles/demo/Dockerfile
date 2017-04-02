@@ -1,9 +1,9 @@
-FROM treehouse/base-ruby:latest
+FROM home/ruby:latest
 
 USER root
 
 # Configure app installation paths
-ENV APPLICATION to-do-list
+ENV APPLICATION demo
 RUN mkdir /opt/$APPLICATION
 RUN chown -R rails:rails /opt
 
@@ -16,7 +16,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 # Download latest version of application
 USER rails
 WORKDIR /opt/$APPLICATION
-RUN git clone -b dev https://github.com/snipealone46/to-do-list.git current
+RUN git clone -b master https://github.com/snipealone46/demo.git current
 WORKDIR /opt/$APPLICATION/current
 RUN bash -l -c 'bundle install'
 

@@ -1,0 +1,10 @@
+to-do-list:
+  image: home/demo
+  volumes:
+    - /Users/Eric/Documents/demo/demo:/opt/demo/current
+  environment:
+    - BRANCH=master
+  ports:
+    - 3000:3000
+  stdin_open: true
+

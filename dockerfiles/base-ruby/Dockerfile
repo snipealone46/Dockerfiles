@@ -1,4 +1,4 @@
-FROM home/debian
+FROM home/debian:stretch
 
 # Add a rails user                                                                                            
 RUN useradd -d /home/rails -s /bin/bash -m rails                                                            
@@ -28,10 +28,9 @@ USER rails
 # Install ruby and bundler
 # If need to build portable ruby (relative load path)
 # RUBY_CONFIGURE_OPTS="--enable-load-relative" rbenv install 2.4.1
-RUN bash -l -c "rbenv install 2.4.1"
-RUN bash -l -c "rbenv global 2.4.1"
+RUN bash -l -c "rbenv install 2.5.1"
+RUN bash -l -c "rbenv global 2.5.1"
 RUN bash -l -c "gem install bundler"
 
 # Set user back to root
 USER root
-

@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 # Set the root password
 RUN echo "root:tt" | chpasswd

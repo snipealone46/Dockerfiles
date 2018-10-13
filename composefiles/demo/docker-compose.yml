@@ -1,7 +1,7 @@
 to-do-list:
   image: home/demo
   volumes:
-    - /Users/Eric/Documents/rails_personal/demo:/opt/demo/current
+    - /Users/Eric/Documents/demo:/opt/demo/current
   environment:
     - BRANCH=master
   ports:

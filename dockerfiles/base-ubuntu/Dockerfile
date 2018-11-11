@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     libgdbm5 \
     libgdbm-dev \
+    libsqlite3-dev \
     nodejs
 # Needed to install websphere RPMs
 RUN apt-get update && apt-get install -y alien
@@ -38,7 +39,7 @@ RUN dpkg-reconfigure locales && \
 RUN apt-get clean
 
 # Change timezone to Pacific
-RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/US/Pacific /etc/localtime
+RUN ln -s /usr/share/zoneinfo/US/Pacific /etc/localtime
 
 # Add script for rebasing a user (used in pyenv/rbenv images)
 RUN mkdir /docker-scripts

@@ -1,4 +1,4 @@
-FROM home/debian:stretch
+FROM home/ubuntu:18.04
 
 # Add a rails user
 RUN useradd -d /home/rails -s /bin/bash -m rails

@@ -27,9 +27,8 @@ USER rails
 
 # Install ruby and bundler
 # If need to build portable ruby (relative load path)
-RUN bash -l -c 'RUBY_CONFIGURE_OPTS="--enable-load-relative" rbenv install 2.5.1'
-RUN bash -l -c "rbenv global 2.5.1"
-RUN bash -l -c "gem install bundler"
+RUN bash -l -c 'RUBY_CONFIGURE_OPTS="--enable-load-relative" rbenv install 2.6.0'
+RUN bash -l -c "rbenv global 2.6.0"
 
 # Set user back to root
 USER root

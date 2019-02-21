@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     bison \
     build-essential \
+    libpq-dev \
     libssl-dev \
     libyaml-dev \
     libreadline6-dev \

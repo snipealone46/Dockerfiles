@@ -1,4 +1,4 @@
-FROM ubuntu/ruby:2.5
+FROM ubuntu/ruby:2.6
 
 USER root
 
@@ -18,6 +18,6 @@ USER rails
 WORKDIR /opt/$APPLICATION
 RUN git clone -b master https://github.com/snipealone46/demo.git current
 WORKDIR /opt/$APPLICATION/current
-#RUN bash -l -c 'bundle install'
+RUN bash -l -c 'bundle install'
 
 EXPOSE 3000
